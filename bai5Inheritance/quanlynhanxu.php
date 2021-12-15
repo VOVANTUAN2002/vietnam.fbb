@@ -13,9 +13,8 @@ class EmployeeManager {
         $this->Employees[]      = $objEmployee;
     }
     public function dell($id)// xóa một nhân sự
-    { 
-        echo 123;
-        unset($this->Employees[$id]);// hàm xóa là unset  $this->Employees[$id] có vị trị id đc đưa biến tùy chọn theo số
+    {
+       
     }
 }
 class Employee {
