@@ -3,7 +3,7 @@ class EmployeeManager {
     public $Employees = [];
     public function addNew()//hiển thị thêm mới
     {
-        // echo 123;
+        // echo 123 ;
         $objEmployee            = new Employee();
         $objEmployee->FirstName = "vo";
         $objEmployee->Lastname  = "tuan";
@@ -14,7 +14,7 @@ class EmployeeManager {
     }
     public function dell($id)// xóa một nhân sự
     {
-       
+        
     }
 }
 class Employee {
@@ -23,10 +23,10 @@ class Employee {
     public $Birthday  = "";
     public $Address   = "";
     public $Position  = "";
-    
+
     public function index()//hiển thị danh sách
     {
-        
+
     }
    
     public function show()//hiển thị danh sách chi tiết 
@@ -60,8 +60,11 @@ echo "<pre>";
 print_r($Employees);
 echo "</pre>";//hiển thị mảng $Employees ở dòng 53;
 $objEmployeeManager = new EmployeeManager();
-$objEmployeeManager->addNew($Employees);// phương thức này có nghĩa là push vào cái mảng 
-$objEmployeeManager->addNew($Employees);
+$objEmployeeManager->addNew();// phương thức này có nghĩa là push vào cái mảng 
+$objEmployeeManager->addNew();// phương thức này có nghĩa là push vào cái mảng 
+$objEmployeeManager->addNew();// phương thức này có nghĩa là push vào cái mảng 
+$objEmployeeManager->addNew();// phương thức này có nghĩa là push vào cái mảng 
+
 $objEmployeeManager->dell(1);// xóa phần có vị trí là số 1
 echo "<pre>";
 print_r($objEmployeeManager->Employees);
@@ -90,7 +93,7 @@ echo "</pre>";
             
         </tr>
         <?php //hiển thị danh sách bằng vòng lặp foreach ?>
-        <?php foreach($Employees as $key => $Employee): //chạy cái mảng $Employees có cái key là [0] có các obj là  $Employee ?>
+        <?php foreach($objEmployeeManager->Employees as $key => $Employee): //chạy cái mảng $Employees có cái key là [0] có các obj là  $Employee ?>
         <tr>
             <td><?= $key+1 ?></td>
             <td><?= $Employee->FirstName ?></td>

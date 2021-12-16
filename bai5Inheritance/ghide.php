@@ -1,4 +1,5 @@
 <?php
+include_once "./hinhhoc/Circle.php";
 class Preson {
     function say(){
         echo "hello";
